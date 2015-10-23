@@ -1,0 +1,7 @@
+/.vs/WiseShopping/v14
+/WiseShopping/Scripts/app/*.js
+/WiseShopping/Scripts/app/*.map
+/WiseShopping/bin
+/WiseShopping/obj/Debug
+/packages
+/.vs/config/applicationhost.config
