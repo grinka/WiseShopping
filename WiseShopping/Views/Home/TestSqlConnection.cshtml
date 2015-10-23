@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "TestSqlConnection";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Use this area to provide additional information.</p>
+
+<div ng-controller="home_controller as ctrl">
+    <div ng-repeat="test in Data.Test" class="row">
+        <div class="col-md-1">{{ test.Id }}</div>
+        <div class="col-md-2">{{ test.name }}</div>
+    </div>
+</div>
+
+@section scripts
+{
+    <script type="text/javascript" src="~/Scripts/app/app.js"></script>
+    <script type="text/javascript" src="~/Scripts/app/home_controller.js"></script>
+    <script type="text/javascript">
+        var Model = {
+            //Test: @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject( ViewBag.Data, Newtonsoft.Json.Formatting.None )) || []
+            Data: {
+                Test: [
+                    { Id: 1, name: "Grinka" },
+                    { Id: 2, name: "Lenk" },
+                    { Id: 3, name: "Gina" }
+
+                ]
+            }
+        }
+    </script>
+}
